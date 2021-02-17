@@ -1,19 +1,19 @@
-import Produto as p
+from produto import Produto
 
 class Produtos:
     def __init__(self):
         self.lista = []        
     
     def cadastrarProduto(self, nome, marca, preco_C, preco_V, qtd):        
-        self.lista.append(p(nome, marca, preco_C, preco_V, qtd))
+        self.lista.append(Produto(nome, marca, preco_C, preco_V, qtd))
     
     def visualizarProdutos(self, item):
         dados = ""
         for i in item:
-            dados += item.nome + " " + item.marca + " " + item.preco_C + " " + item.preco_V + " " + item.qtd + "\n"
+            dados += i.nome + " " + i.marca + " " + str(i.preco_C) + " " + str(i.preco_V) + " " + str(i.qtd) + "\n"
         return dados
     
-    def excluirProduto(self):
+    def excluirProduto(self, item):
         return None
     
     def alterarProduto(self):
