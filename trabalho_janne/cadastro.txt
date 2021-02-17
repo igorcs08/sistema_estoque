@@ -1,0 +1,3 @@
+sabao 2.000000 ype
+arroz 2.300000 po
+feijao 1.200000 as
