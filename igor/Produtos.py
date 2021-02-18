@@ -8,7 +8,7 @@ class Produtos:
         self.lista.append(Produto(nome, marca, preco_C, preco_V, qtd))
     
     def exibirProduto(self, item):        
-        return item.nome + " " + item.marca + " " + str(item.preco_C) + " " + str(item.preco_V) + " " + str(item.qtd) + "\n"
+        return item.getNome() + " " + item.getMarca() + " " + str(item.getPreco_C()) + " " + str(item.getPreco_V()) + " " + str(item.getQtd()) + "\n"
 
     def visualizarProdutos(self, item):
         if self.lista != []:
@@ -21,7 +21,7 @@ class Produtos:
     
     def buscarItem(self, nome):        
         for item in self.lista:
-            if (item.nome == nome):
+            if (item.getNome() == nome):
                 return self.lista.index(item)
                 
     def excluirProduto(self, nome):
