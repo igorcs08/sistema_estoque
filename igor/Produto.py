@@ -1,11 +1,18 @@
-class Produto:
-    def __init__(self, nome, marca, preco_C, preco_V, qtd):        
+class Produto:    
+    def __init__(self, nome, marca, preco_C, preco_V, qtd):                        
+        self.id = 0
         self.nome = nome
         self.marca= marca
         self.preco_C = preco_C
         self.preco_V = preco_V
         self.qtd = qtd
     
+    def getId(self):
+        return self.id
+
+    def setId(self, id):
+        self.id = id
+
     def getNome(self):
         return self.nome
 
